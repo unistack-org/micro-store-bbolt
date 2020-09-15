@@ -60,12 +60,12 @@ func TestBlobStore(t *testing.T) {
 
 	t.Run("DeleteIncorrectNamespace", func(t *testing.T) {
 		err := blob.Delete("hello", store.BlobNamespace("bar"))
-		assert.Equal(t, store.ErrNotFound, err, "Error should be not found")
+		assert.Nil(t, err, "Error should be nil")
 	})
 
 	t.Run("DeleteCorrectNamespaceIncorrectKey", func(t *testing.T) {
 		err := blob.Delete("world", store.BlobNamespace("micro"))
-		assert.Equal(t, store.ErrNotFound, err, "Error should be not found")
+		assert.Nil(t, err, "Error should be nil")
 	})
 
 	t.Run("DeleteCorrectNamespace", func(t *testing.T) {
