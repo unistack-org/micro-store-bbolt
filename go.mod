@@ -2,7 +2,7 @@ module github.com/unistack-org/micro-store-bbolt
 
 go 1.15
 
-replace github.com/coreos/bbolt => go.etcd.io/bbolt v1.3.3
+replace github.com/coreos/bbolt => go.etcd.io/bbolt v1.3.5
 
 require (
 	github.com/davecgh/go-spew v1.1.1
